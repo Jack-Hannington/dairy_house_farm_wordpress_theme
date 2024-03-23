@@ -1,3 +1,1 @@
-# Hannington Digital them
-
-Theme for Dairy House Farm Livery
+# Dairy House Farm Livery Theme

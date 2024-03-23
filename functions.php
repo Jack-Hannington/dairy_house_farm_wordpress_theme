@@ -303,6 +303,22 @@ function create_offers_cpt() {
 }
 add_action('init', 'create_offers_cpt');
 
+// Custom query for offers
+function create_events_cpt() {
+    $args = array(
+        'public' => true,
+        'label'  => 'Events',
+        'show_in_rest' => true, // Enable Gutenberg editor
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // 'custom-fields' for start date & details
+        // Optionally, add 'rewrite' to define a custom slug
+        'rewrite' => array('slug' => 'events'),
+        'menu_icon' => 'dashicons-calendar-alt',
+    );
+    register_post_type('event', $args);
+}
+add_action('init', 'create_events_cpt');
+
+
 
 
 
