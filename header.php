@@ -55,7 +55,6 @@
     }
     ?>
               </div>
-              <!-- <div class="nav-item menu-number">0161 401 1000</div> -->
               <div class="nav-item close-menu">
                 <div id="closeMenu" class="nav-toggle">
                   <span>&times;</span>
@@ -76,9 +75,9 @@
             </div>
           </div>
           <?php if (get_theme_mod('dairy_house_navbar_cta_visible', true)) : ?>
-          <div id="nav-cta" class="nav-item menu-cta">
+          <div id="nav-cta" class="nav-item menu-cta hide-sm">
               <div class="wp-block-button">
-                  <a class="wp-block-button__link wp-element-button nav-cta-button" href="<?php echo esc_url(get_theme_mod('dairy_house_navbar_cta_link', '/about#contact')); ?>" title="<?php echo esc_attr(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>">
+                  <a style="font-family:Playfair; font-size:14px; font-weight:500;" class="dark-grey" href="<?php echo esc_url(get_theme_mod('dairy_house_navbar_cta_link', '/about#contact')); ?>" title="<?php echo esc_attr(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>">
                       <?php echo esc_html(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>
                   </a>
               </div>

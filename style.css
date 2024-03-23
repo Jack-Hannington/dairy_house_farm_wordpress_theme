@@ -11,12 +11,12 @@ Text Domain: hannington_digital
 */
 
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #fff;
   --body-text-color: #25343F;
   --dark-grey: #2C2B39;
   --blue-grey: #7F919E;
   --background-grey: #DFE3EC;
-  --default-border-radius:10px;
+  --default-border-radius:4px;
   --light-grey: #F6F6F6;
   --medium-grey: #E3E3E3;
   --body-font-size: 1rem;
@@ -28,7 +28,7 @@ Text Domain: hannington_digital
   --bronze: #D2881B;
   --silver: #9a9494;
   --gold: #F0AA22;
-  --dark-blue: #0f3e61;
+  --dark-blue: #0a204e;
   --animate-duration: 400ms;
   --default-box-shadow: 0px -4px 19px 3px rgb(0 0 0 / 13%);
 }
@@ -73,12 +73,12 @@ html {
 }
 
 body {
-  font-family: 'Playfair', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: var(--body-font-size);
   color: var(--body-text-color);
   text-align: left;
-  background-color: var(--background-grey);
+  background-color: var(--bg-color);
   line-height: var(--default-line-height);
   border-radius:var(--default-border-radius);
 
@@ -102,6 +102,10 @@ body {
 .background-green {
   background-color:var(--green);
   color: var(--light-grey);
+}
+
+.dark-grey {
+  color:var(--dark-grey);
 }
 
 .dark-grey-bg {
@@ -163,14 +167,20 @@ body {
 
 /*---- NAV ----*/
 
+#siteTitle {
+  font-family: 'Playfair', 'Inter';
+  font-size: 18px;
+  font-weight: 600;
+}
+
 nav {
   width: 100%;
   margin: 0;
-  background-color:white;
+  background-color:var(--bg-color);
   transition: 0.3s ease-in;
   top: 0;
   border-radius: 10px 10px 0px 0px;
-  border-bottom: 1px solid var(--medium-grey);
+  /* border-bottom: 1px solid var(--medium-grey); */
   /* box-shadow: 0px -4px 19px 3px rgb(0 0 0 / 13%); */
   z-index: 1000;
 }
@@ -198,7 +208,7 @@ nav {
 }
 
 .custom-logo {
-  width: 100px;
+  width: 180px;
   height: auto;
   transition: 0.3s ease-in;
 }
@@ -232,10 +242,10 @@ nav {
 }
 
 .nav-toggle {
-  width: 44px;
+  width: 54px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid lightgrey;
+  /* border: 1px solid lightgrey; */
   display: inline-flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -284,7 +294,7 @@ nav {
   display: block;
   transition: 0.3s ease-in;
   font-size:14px;
-  font-weight:500;
+  font-weight:400;
   color: var(--body-text-color);
 }
 
@@ -360,7 +370,7 @@ nav {
 }
 
 .services-menu .current-menu-item a {
-  color: var(--green); 
+  color: var(--gold); 
   font-weight: 500;
 }
 
@@ -542,7 +552,6 @@ nav {
     height: auto;
     flex: 8;
     padding: 0;
-
     background-color: inherit;
   }
 
@@ -553,7 +562,7 @@ nav {
   .menu-body ul {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     white-space: nowrap;
     font-size: 0.9rem;
   }
@@ -642,19 +651,23 @@ nav {
 
 .container {
   margin: auto;
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
+/* 
 @media (min-width:1500px){
   .container {
-    max-width: 1380px;
+    max-width: 1440px;
   }
-}
+} */
 
 @media (max-width:1000px){
   .container {
-    padding-left:20px;
-    padding-right:20px;
+    /* padding-left:20px;
+    padding-right:20px; */
+  }
+  .scroll-card {
+    min-width: 300px;
   }
 }
 
@@ -671,9 +684,7 @@ nav {
   flex-direction: row;
 }
 
-.scroll-card {
-  min-width: 300px;
-}
+
 
 
 .scroll-container {
@@ -682,10 +693,6 @@ nav {
   justify-content: flex-start;
   display: flex;
   flex-direction: row;
-}
-
-.scroll-card {
-  min-width:300px;
 }
 
 /* Default gap between column container */
@@ -697,20 +704,20 @@ nav {
 /* Limit written content width  - useful for long text headings */
 
 .max-450 {
-  max-width: 450px;
+  max-width: 450px!important;
 }
 .max-550 {
-  max-width: 450px;
+  max-width: 550px!important;;
 }
 .max-650 {
-  max-width: 650px;
+  max-width: 650px!important;;
 }
 
 .max-750 {
-  max-width: 750px;
+  max-width: 750px!important;;
 }
 
-/*--- HEADINGS ----*/
+/*--- HEADINGS AND FONTS ----*/
 
 h1,
 h2,
@@ -719,7 +726,7 @@ h4,
 h5,
 h6 {
   font-family: 'Playfair', 'Inter', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--dark-grey);
 }
 /* .wp-block-heading {
@@ -728,17 +735,17 @@ h6 {
 
 
 h1 {
-  font-weight: 700;
+  font-weight: 400;
   max-width: 750px;
-  font-size: calc(2.4rem + 1.5vw);
-  line-height: 2.8rem;
+  font-size: calc(2.8rem + 1.5vw);
+  line-height: calc(2.8rem + 1.5vw);
 }
 
-@media screen and (max-width:500px){
+/* @media screen and (max-width:500px){
  h1 {
   font-size: calc(1.7rem + 1.5vw)
  } 
-}
+} */
 
 .subheading {
   font-size:18px;
@@ -748,15 +755,18 @@ h1 {
 
 @media (min-width : 1200px) {
   h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 4rem;
+    line-height: 5rem;
+    font-size: 5rem;
   }
   .brow-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
+
+p {
+  word-wrap: break-word;
+}
 
 
 /* Paragrahs, strong, a*/
@@ -773,7 +783,7 @@ strong {
 /* Text preceding a section's heading */
 
 .brow-text {
-  color: var(--orange)!important;
+  color: var(--gold)!important;
   margin-bottom: 5px;
   font-weight: 500;
 }
@@ -787,7 +797,10 @@ strong {
 
 .wp-block-cover {
   padding:0px;
+  z-index: 0;
 }
+
+
 
 /* Buttons and links */
 
@@ -798,7 +811,7 @@ a {
 }
 
 a:hover {
-  color:var(--green);
+  color:var(--gold);
   opacity: 0.7;
 }
 
@@ -810,9 +823,10 @@ a:hover {
 button, .btn {
   border-radius: var(--default-border-radius);
   background-color: var(--dark-grey);
-  color: #F6F5F5;
-  padding: 10px 20px;
-  font-size: 14px;
+  color: var(--bg-color);
+  padding: 8px 16px;
+  font-size: 15px;
+  font-family: 'Playfair';
   font-weight: 500;
   border:none;
   transition: 0.3s;
@@ -820,12 +834,12 @@ button, .btn {
 }
 
 .wp-block-button .wp-block-button__link.is-style-outline, .wp-block-button.is-style-outline>.wp-block-button__link {
-  padding: 8px 20px;
-  font-size: 14px;
-  background-color: #fff;
-  box-shadow:  inset 0px -3px 6px 2px #f4f4f4;
+  padding: 6px 14px;
+  font-size: 15px;
+  background-color: #ededed;
+  /* box-shadow:  inset 0px -3px 6px 2px #f4f4f4; */
   border:1px solid var(--light-grey);
-  color: var(--orange)!important;
+  color: var(--dar)!important;
 }
 
 
@@ -892,12 +906,12 @@ figure {
 /* Cards */
 
 .card {
-  border-radius: 10px;
+  border-radius: var(--default-border-radius);
   padding:14px;
   transition:0.3s ease-in; 
-  min-width: 250px;
+  /* min-width: 250px; */
   border:1px solid var(--light-grey);
-  box-shadow: 0px 4px 10px 3px rgb(0 0 0 / 5%);
+  /* box-shadow: 0px 4px 10px 3px rgb(0 0 0 / 5%); */
   /* font-size: 0.9rem; */
 }
 
@@ -905,12 +919,12 @@ figure {
   font-size: 14px;
 }
 
-.card:hover > .wp-block-buttons >  .wp-block-button a{
+/* .card:hover > .wp-block-buttons >  .wp-block-button a{
   background-color: var(--green);
   box-shadow: none;
   color:white!important;
   opacity: 1;
-}
+} */
 
 .card a {
   text-decoration: none;
@@ -938,11 +952,7 @@ figure {
   }
 }
 
-.card:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  border:1px solid var(--green);
-  cursor:pointer;
-}
+
 
 /* Forms */
 
