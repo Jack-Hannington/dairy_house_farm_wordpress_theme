@@ -27,7 +27,7 @@
         if (has_custom_logo()) {
             the_custom_logo();
         } else {
-            echo '<div id="siteTitle" class="siteTitle">' . get_bloginfo('name') . '</div>';
+            echo '<div id="siteTitle" class="siteTitle"><a href="/">' . get_bloginfo('name') . '</a></div>';
         }
     }
     ?>
