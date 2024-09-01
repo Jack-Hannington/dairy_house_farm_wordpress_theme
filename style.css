@@ -66,6 +66,15 @@ Text Domain: hannington_digital
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Lora';
+  src: url('assets/fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: oblique 0deg 10deg;
+  font-display: swap;
+}
+
+
 html {
   height: 100%;
   scroll-behavior: smooth;
@@ -737,7 +746,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Playfair', 'Inter', sans-serif;
+  font-family: 'Lora', 'Inter', sans-serif;
   font-weight: 500;
   color: var(--dark-blue);
 }
@@ -851,7 +860,7 @@ button, .btn {
 .wp-block-button .wp-block-button__link.is-style-outline, .wp-block-button.is-style-outline>.wp-block-button__link {
   padding: 6px 14px;
   font-size: 15px;
-  background-color: #ededed;
+  background-color: transparent;
   /* box-shadow:  inset 0px -3px 6px 2px #f4f4f4; */
   border:1px solid var(--light-grey);
 }
