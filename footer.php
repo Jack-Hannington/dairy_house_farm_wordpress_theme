@@ -19,29 +19,11 @@
                     <div><p style="color:white;font-size:14px;margin-top:10px;">Dairy House Lane <br/>Altrincham <br/>WA14 5RE</p></div>
                 </div>
                 <!-- Links Menu Column -->
-                <div class="col-lg-3 col-12 d-flex flex-column">
+                <div class="col-lg-9 col-12 d-flex flex-column">
                     <h6 class="footer-menu-title">Site links</h6>
                     <?php wp_nav_menu(array(
                         'theme_location' => 'header-menu',
-                        'menu_class' => 'footer-menu d-flex flex-column',
-                        'fallback_cb' => false
-                    )); ?>
-                </div>
-                <!-- Information Menu Column -->
-                <div class="col-lg-3 col-12 d-flex flex-column">
-                    <h6 class="footer-menu-title">Information</h6>
-                    <?php wp_nav_menu(array(
-                        'theme_location' => 'information-menu',
-                        'menu_class' => 'footer-menu d-flex flex-column',
-                        'fallback_cb' => false
-                    )); ?>
-                </div>
-                <!-- Contact Details Column -->
-                <div class="col-lg-3 col-12 d-flex flex-column">
-                    <h6 class="footer-menu-title">Contact Details</h6>
-                    <?php wp_nav_menu(array(
-                        'theme_location' => 'contact-menu',
-                        'menu_class' => 'footer-menu d-flex flex-column',
+                        'menu_class' => 'footer-menu d-flex4',
                         'fallback_cb' => false
                     )); ?>
                 </div>

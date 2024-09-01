@@ -77,7 +77,7 @@
           <?php if (get_theme_mod('dairy_house_navbar_cta_visible', true)) : ?>
           <div id="nav-cta" class="nav-item menu-cta hide-sm">
               <div class="wp-block-button">
-                  <a style="font-family:Playfair; font-size:14px; font-weight:500;" class="dark-grey" href="<?php echo esc_url(get_theme_mod('dairy_house_navbar_cta_link', '/about#contact')); ?>" title="<?php echo esc_attr(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>">
+                  <a style="font-family:Lora; font-size:14px; font-weight:500;" class="dark-grey" href="<?php echo esc_url(get_theme_mod('dairy_house_navbar_cta_link', '/about#contact')); ?>" title="<?php echo esc_attr(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>">
                       <?php echo esc_html(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>
                   </a>
               </div>
