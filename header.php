@@ -2,10 +2,11 @@
 <html lang="en-GB">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
 <script defer src="https://kit.fontawesome.com/eab92a2496.js" crossorigin="anonymous"></script>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +28,7 @@
         if (has_custom_logo()) {
             the_custom_logo();
         } else {
-            echo '<div id="siteTitle" class="siteTitle"><a href="/">' . get_bloginfo('name') . '</a></div>';
+            echo '<a href="/"><div id="siteTitle" class="siteTitle">' . get_bloginfo('name') . '</div></a>';
         }
     }
     ?>
@@ -77,7 +78,7 @@
           <?php if (get_theme_mod('dairy_house_navbar_cta_visible', true)) : ?>
           <div id="nav-cta" class="nav-item menu-cta hide-sm">
               <div class="wp-block-button">
-                  <a style="font-family:Lora; font-size:14px; font-weight:500;" class="dark-grey" href="<?php echo esc_url(get_theme_mod('dairy_house_navbar_cta_link', '/about#contact')); ?>" title="<?php echo esc_attr(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>">
+                  <a style="font-family:Lora; font-size:14px; font-weight:500;" class="wp-block-button__link" href="<?php echo esc_url(get_theme_mod('dairy_house_navbar_cta_link', '/about#contact')); ?>" title="<?php echo esc_attr(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>">
                       <?php echo esc_html(get_theme_mod('dairy_house_navbar_cta_text', 'Contact me')); ?>
                   </a>
               </div>
@@ -95,3 +96,7 @@
       <!-- End navbar -->
 
     </header><!-- #masthead -->
+
+
+
+    

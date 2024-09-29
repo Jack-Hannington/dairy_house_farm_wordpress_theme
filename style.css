@@ -12,7 +12,7 @@ Text Domain: hannington_digital
 
 :root {
   --bg-color: #fff;
-  --body-text-color: #25343F;
+  --body-text-color: #110106;
   --dark-grey: #2C2B39;
   --blue-grey: #7F919E;
   --background-grey: #DFE3EC;
@@ -29,6 +29,7 @@ Text Domain: hannington_digital
   --silver: #9a9494;
   --gold: #D2AC67;
   --dark-blue: #012B58;
+  --dunham-red: #7A2B2B;
   --animate-duration: 400ms;
   --default-box-shadow: 0px -4px 19px 3px rgb(0 0 0 / 13%);
 }
@@ -187,8 +188,9 @@ body {
 
 #siteTitle {
   font-family: 'Lora', 'Inter';
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--body-text-color);
 }
 
 nav {
@@ -317,7 +319,7 @@ nav {
 }
 
 .menu li a:hover {
-  color:var(--gold);
+  color:var(--dunham-red);
 }
 
 
@@ -388,7 +390,7 @@ nav {
 }
 
 .services-menu .current-menu-item a {
-  color: var(--gold); 
+  color: var(--dunham-red); 
   font-weight: 500;
 }
 
@@ -669,7 +671,7 @@ nav {
 
 .container {
   margin: auto;
-  max-width: 1280px;
+  max-width: 1360px;
 }
 
 /* 
@@ -713,6 +715,12 @@ nav {
   flex-direction: row;
 }
 
+
+.scroll-container > p {
+  white-space: nowrap!important;
+  margin-bottom:0px!important;
+}
+
 /* Default gap between column container */
 :where(.wp-block-columns.is-layout-flex) {
   gap: 4em;
@@ -749,7 +757,7 @@ h5,
 h6 {
   font-family: 'Lora', 'Inter', sans-serif;
   font-weight: 500;
-  color: var(--dark-blue);
+  color: var(--body-text-color);
 }
 /* .wp-block-heading {
   max-width: 700px;
@@ -805,7 +813,7 @@ strong {
 /* Text preceding a section's heading */
 
 .brow-text {
-  color: var(--gold)!important;
+  color: var(--dunham-red)!important;
   margin-bottom: 5px;
   font-weight: 600;
   font-family: 'Lora';
@@ -829,14 +837,19 @@ strong {
 
 a {
   text-decoration: none;
-  color:inherit;
+  color: var(--dunham-red);
   transition: all 0.3s ease-in;
 }
 
+/* Reset link color for specific contexts */
+.wp-block-cover__inner-container a,
+.wp-block-cover__inner-container p {
+  color: inherit !important;
+}
 
 
 a:hover {
-  color:var(--gold);
+  color:var(--dunham-red);
   opacity: 0.7;
 }
 
@@ -847,7 +860,7 @@ a:hover {
 .wp-block-button__link, .wp-element-button,
 button, .btn {
   border-radius: var(--default-border-radius);
-  background-color: var(--dark-blue);
+  background-color: var(--dunham-red);
   color: var(--bg-color);
   padding: 8px 16px;
   font-size: 15px;
@@ -1453,6 +1466,28 @@ details {
 	}
 }
 
+/* Events */
+.home-events-row p {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.home-events-row p::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  border-radius: 6px;
+  height: 2px;
+  background-color: var(--dunham-red);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+/* Remove line after the last paragraph */
+.home-events-row p:last-child::after {
+  content: none;
+}
 
 /* Footers */
 
